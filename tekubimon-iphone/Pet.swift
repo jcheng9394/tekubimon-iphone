@@ -11,7 +11,7 @@ import Foundation
 class Pet {
     var name: String
     var level: Int
-    var happiness: Int = 10
+    var happiness: Int = 50
     var attack: Int
     var defense: Int
     var health: Int
@@ -40,25 +40,7 @@ class Pet {
     
     //maybe put the following two functions into the environment? seems more logical
     //all the battle stuff can probably be put into the environment instead
-    func attackEnemy(opponent: Pet){
-        let damage = self.attack - opponent.defense
-        
-        if damage > 0 {
-            opponent.health -= damage
-        }
-    }
-    
-    func defendSelf(opponent: Pet){
-        let damage = opponent.attack - self.defense
-        
-        if damage > 0 {
-            self.health -= damage
-        }
-    }
-    
-    func beCleaned(){
-        self.happiness = 10
-    }
+ 
     
     //points should be allocated in view, so maybe pass in the name of the variable the user wants to allocate?
     func allocatePoints(stat: String){

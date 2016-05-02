@@ -169,15 +169,20 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="missingSteps" destination="1Ko-H3-IYx" id="w38-rQ-5p0"/>
+                        <outlet property="petName" destination="Ltp-I7-VK1" id="ICG-Ky-d8Q"/>
+                        <outlet property="skillPoints" destination="UQb-uO-Je2" id="pAd-SH-gAr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-92.5" y="122.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Stats Page Controller-->
         <scene sceneID="FaK-vp-xg9">
             <objects>
-                <viewController id="u4K-ph-VTg" sceneMemberID="viewController">
+                <viewController id="u4K-ph-VTg" customClass="StatsPageController" customModule="tekubimon_iphone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="97h-ui-crV"/>
                         <viewControllerLayoutGuide type="bottom" id="5kH-mM-pQf"/>
@@ -285,6 +290,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Close" destination="Vda-ZT-rxT" id="mHF-a0-Ias"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzE-Y7-JQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

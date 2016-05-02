@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let healthStore: HKHealthStore = HKHealthStore()
+    
     var window: UIWindow?
 
 

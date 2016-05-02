@@ -5,9 +5,10 @@
 //  Created by Justin Cheng on 4/30/16.
 //  Copyright © 2016 William Shi. All rights reserved.
 
-// The ideas were taken from https://www.natashatherobot.com/healthkit-getting-fitness-data/
+// The ideas were taken from https://github.com/Darktt/HealthKit-Swift
 // Some code is copied and other lines are modified to contain what we need
 
+import Foundation
 import HealthKit
 
 class HealthKitManager {
@@ -19,16 +20,17 @@ class HealthKitManager {
         
         return Singleton.instance
     }
+    let healthStore: HKHealthStore? = {
+        if HKHealthStore.isHealthDataAvailable() {
+            return HKHealthStore()
+        } else {
+            return nil
+        }
+    }()
     
     func authorizeHealthKit(completion: ((success:Bool, error:NSError!) -> Void)!){
 
-        let healthStore: HKHealthStore? = {
-            if HKHealthStore.isHealthDataAvailable() {
-                return HKHealthStore()
-            } else {
-                return nil
-            }
-        }()
+       
         let stepsCount = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
         let dataTypesToWrite = NSSet(object: stepsCount!)
         let dataTypesToRead = NSSet(object: stepsCount!)
